@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="theme-color" content="#3f51b5">
+	<title>在线练习 - 2019江西省信息技术知识竞赛公开题库 Powered by NowTime.cc (现在网)</title>
+    <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/0.4.2/css/mdui.min.css">
+    <style>
+        .mcq-input{
+            display: inline;
+            width: 10%;
+        }
+        .mcp-answer{
+            border-bottom:2px solid #FF4081;
+            width: 40px;
+            display: inline-block;
+        }
+        .mcp-answer-write{
+            color: #FF4081;
+            border-bottom:2px solid #FF4081!important;
+            cursor: pointer;
+            width: auto;
+        }
+
+        .english-page{
+            padding: 16px 0;
+        }
+    </style>
+</head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink">
+<header class="mdui-appbar mdui-appbar-fixed">
+    <div class="mdui-toolbar mdui-color-theme">
+        <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}">
+            <i class="mdui-icon material-icons">menu</i>
+        </span>
+        <a href="./" class="mdui-typo-headline mdui-hidden-xs">2019江西省信息技术知识竞赛公开题库</a>
+        <a href="./" class="mdui-typo-title">在线练习</a>
+        <div class="mdui-toolbar-spacer"></div>
+        <span class="mdui-btn mdui-ripple mdui-ripple-white" mdui-tooltip="{content: '点击评分试题'}" onclick="answer_mark()">评分</span>
+    </div>
+</header>
+
+<div class="mdui-drawer" id="main-drawer">
+    <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px;">
+        <a class="mdui-list-item mdui-ripple mdui-text-color-theme mdui-list-item-active" href="/">
+            <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+            <div class="mdui-list-item-content">首页</div>
+        </a>
+    </div>
+</div>
+
+<div class="mdui-container">
+
+    <div class="mdui-card mdui-m-t-2 mdui-m-t-4 mdui-p-l-1">
+        <div class="mdui-card-content mdui-typo">
+            <div class="mdui-typo-title">
+                <ol>
+                    <li>2019/09/26 收到老师发的题库，当即就想做网页在线练习的题库</li>
+                    <li>2019/09/27 开始动手，首先将 题库.xls 转换为 题库.csv，然后通过 php 处理数据，导出为 json</li>
+                    <li>2019/09/28 发现之前处理的题库有问题，原本应该是 3066 题的，现在一渲染有 4000+题，原因是用 php 处理数据是直接根据 \r\n 分割题目，导致题库后面部分有好多编程题的题目有换行符，导致“多出很多题目”，这也表明了当时自己处理数据不不严谨...</li>
+                    <li>2019/09/29 经过三天空闲时间，终于做好了</li>
+                </ol>
+                <a href="./exam.html">开始练习</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.loli.net/ajax/libs/mdui/0.4.2/js/mdui.min.js"></script>
+<!--<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<script>var $$ = mdui.JQ;</script>
+<script src="./static/js/data.js?t=v9"></script>
+<script src="./static/js/script.js?t=v9"></script>
+<script id="template" type="text/x-handlebars-template">
+    <div class="english-page-{{id}}">
+        <div class="mdui-typo-title">{{i}}. {{question}}</div>
+        <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6">
+            <label class="mdui-radio">
+                <input type="radio" name="radio-{{id}}" value="A"/>
+                <i class="mdui-radio-icon"></i>
+                A. <span class="radio-answer">{{A}}</span>
+            </label>
+        </div>
+        <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6">
+            <label class="mdui-radio">
+                <input type="radio" name="radio-{{id}}" value="B"/>
+                <i class="mdui-radio-icon"></i>
+                B. <span class="radio-answer">{{B}}</span>
+            </label>
+        </div>
+        <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6">
+            <label class="mdui-radio">
+                <input type="radio" name="radio-{{id}}" value="C"/>
+                <i class="mdui-radio-icon"></i>
+                C. <span class="radio-answer">{{C}}</span>
+            </label>
+        </div>
+        <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6">
+            <label class="mdui-radio">
+                <input type="radio" name="radio-{{id}}" value="D"/>
+                <i class="mdui-radio-icon"></i>
+                D. <span class="radio-answer">{{D}}</span>
+            </label>
+        </div>
+    </div>
+    <div style="padding: 48px 0"></div>
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b2bd8af031363ee20bf00296d6c15fcf";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

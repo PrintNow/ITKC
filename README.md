@@ -3,6 +3,8 @@
 > ITKC：*Information Technology Knowledge Competition*
 >
 > 在线示例：http://itkc.NowTime.cc
+>
+> 较为详细使用说明：https://nowtime.cc/github/780.html
 
 # What’s | 这是什么
 
@@ -43,6 +45,12 @@
 
 1. 首先，加载题库数据文件 `static/js/data.js`
 2. 然后监听 DOM 加载完成事件，完成后开始渲染试题
+
+# 缺点
+> 既是缺点，也是后面**可能会做**的功能，也欢迎提交 Issues，提出你要做的功能，分担任务，众人拾柴火焰高
+1. 暂时无法设置一页渲染多少题目
+2. 暂时无法按比例抽出300题做，如计算机基础、程序设计等按照一定比例渲染试卷去做
+3. 暂时无法指定类型题目做
 
 # Thanks | 感谢
 

@@ -7,26 +7,28 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
     <meta name="theme-color" content="#3f51b5">
-	<title>在线练习 - 2019江西省信息技术知识竞赛公开题库 Powered by NowTime.cc (现在网)</title>
-    <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/0.4.2/css/mdui.min.css">
+    <title>在线练习 - 2020江西省信息技术知识竞赛公开题库 Powered by NowTime.cc (现在网)</title>
+    <link rel="stylesheet" href="./static/css/mdui.css">
     <style>
-        .mcq-input{
+        .mcq-input {
             display: inline;
             width: 10%;
         }
-        .mcp-answer{
-            border-bottom:2px solid #FF4081;
+
+        .mcp-answer {
+            border-bottom: 2px solid #FF4081;
             width: 40px;
             display: inline-block;
         }
-        .mcp-answer-write{
+
+        .mcp-answer-write {
             color: #FF4081;
-            border-bottom:2px solid #FF4081!important;
+            border-bottom: 2px solid #FF4081 !important;
             cursor: pointer;
             width: auto;
         }
 
-        .english-page{
+        .english-page {
             padding: 16px 0;
         }
     </style>
@@ -34,7 +36,8 @@
 <body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink">
 <header class="mdui-appbar mdui-appbar-fixed">
     <div class="mdui-toolbar mdui-color-theme">
-        <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}">
+        <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
+              mdui-drawer="{target: '#main-drawer', swipe: true}">
             <i class="mdui-icon material-icons">menu</i>
         </span>
         <a href="./" class="mdui-typo-headline mdui-hidden-xs">2019江西省信息技术知识竞赛公开题库</a>
@@ -59,9 +62,12 @@
         <div class="mdui-card-content mdui-typo">
             <div class="mdui-typo-title">
                 <ol>
+                    <li>2020/10/15 14:45 更新2020年题库</li>
                     <li>2019/09/26 收到老师发的题库，当即就想做网页在线练习的题库</li>
                     <li>2019/09/27 开始动手，首先将 题库.xls 转换为 题库.csv，然后通过 php 处理数据，导出为 json</li>
-                    <li>2019/09/28 发现之前处理的题库有问题，原本应该是 3066 题的，现在一渲染有 4000+题，原因是用 php 处理数据是直接根据 \r\n 分割题目，导致题库后面部分有好多编程题的题目有换行符，导致“多出很多题目”，这也表明了当时自己处理数据不不严谨...</li>
+                    <li>2019/09/28 发现之前处理的题库有问题，原本应该是 3066 题的，现在一渲染有 4000+题，原因是用 php 处理数据是直接根据 \r\n
+                        分割题目，导致题库后面部分有好多编程题的题目有换行符，导致“多出很多题目”，这也表明了当时自己处理数据不不严谨...
+                    </li>
                     <li>2019/09/29 经过三天空闲时间，终于做好了</li>
                 </ol>
                 <a href="./exam.html">开始练习</a>
@@ -71,10 +77,9 @@
 
 </div>
 
-<script src="https://cdnjs.loli.net/ajax/libs/mdui/0.4.2/js/mdui.min.js"></script>
-<!--<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<script src="./static/js/mdui.js"></script>
 <script>var $$ = mdui.JQ;</script>
-<script src="./static/js/data.js?t=v9"></script>
+<script src="./static/js/data_2020.js?t=v9"></script>
 <script src="./static/js/script.js?t=v9"></script>
 <script id="template" type="text/x-handlebars-template">
     <div class="english-page-{{id}}">
@@ -110,14 +115,14 @@
     </div>
     <div style="padding: 48px 0"></div>
 </script>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?b2bd8af031363ee20bf00296d6c15fcf";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+<!--<script>-->
+<!--    var _hmt = _hmt || [];-->
+<!--    (function () {-->
+<!--        var hm = document.createElement("script");-->
+<!--        hm.src = "https://hm.baidu.com/hm.js?b2bd8af031363ee20bf00296d6c15fcf";-->
+<!--        var s = document.getElementsByTagName("script")[0];-->
+<!--        s.parentNode.insertBefore(hm, s);-->
+<!--    })();-->
+<!--</script>-->
 </body>
 </html>

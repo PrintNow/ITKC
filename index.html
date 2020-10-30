@@ -71,6 +71,7 @@
                     由于这是一年前写的，翻阅代码自己写的比较烂，众多想实现的功能没有实现，但是你们可以查看 /static/js/data_*.js 文件，里面是题库数据，是 JSON 数据格式的，任由你发挥
                 </blockquote>
                 <ul>
+                    <li>2020/10/30 08:35 纠正6处题目答案错误：403、426、455、1322、2606、1786 题</li>
                     <li>2020/10/15 14:45 更新2020年题库</li>
                     <li>2019/09/26 收到老师发的题库，当即就想做网页在线练习的题库</li>
                     <li>2019/09/27 开始动手，首先将 题库.xls 转换为 题库.csv，然后通过 php 处理数据，导出为 json</li>
@@ -92,8 +93,8 @@
 
 <script src="./static/js/mdui.js"></script>
 <script>var $$ = mdui.JQ;</script>
-<script src="./static/js/data_2020.js?t=v9"></script>
-<script src="./static/js/script.js?t=v9"></script>
+<script src="./static/js/data_2020.js?t=v10"></script>
+<script src="./static/js/script.js?t=v10"></script>
 <script id="template" type="text/x-handlebars-template">
     <div class="english-page-{{id}}">
         <div class="mdui-typo-title">{{i}}. {{question}}</div>
